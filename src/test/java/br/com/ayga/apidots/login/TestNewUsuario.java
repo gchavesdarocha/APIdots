@@ -10,7 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-@DisplayName("Testes automatizados relacionados ao login do dots")
+@DisplayName("Testes automatizados ao login com dados inválidos")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class TestNewUsuario {
@@ -30,6 +30,5 @@ public class TestNewUsuario {
     public void Cadastro(){
         navegador.get("https://dots.ayga.com.br/");
         navegador.findElement(By.className("v-chip__content")).click();
-
     }
 }

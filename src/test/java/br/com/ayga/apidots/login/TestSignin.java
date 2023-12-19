@@ -21,12 +21,13 @@ public class TestSignin {
 
     @Test
     @Order(1)
-    @DisplayName("Registrar um novo usuário com dados válidos")
+    @DisplayName("Registrar um login do usuário com dados válidos")
     public void Login(){
 
-        navegador.get("https://dots.ayga.com.br/");
-        navegador.findElement(By.id("input-36")).sendKeys("gabriel.rocha@ayga.com.br");
-        navegador.findElement(By.id("password")).sendKeys("desde1909@");
+        navegador.get("https://dots-stg.ayga.com.br/");
+        navegador.findElement(By.id("login__emailField")).sendKeys("gabriel.rocha@ayga.com.br");
+        navegador.findElement(By.id("login__passwordField")).sendKeys("desde1909@");
+        navegador.findElement(By.id("login__loginButton")).click();
     }
 
     @Test
@@ -34,8 +35,6 @@ public class TestSignin {
     @DisplayName("Registrar um log out após entrar na plataforma")
     public void LoginOut(){
 
-        navegador.get("https://dots.ayga.com.br/");
-        navegador.findElement(By.id("input-36")).sendKeys("gabriel.rocha@ayga.com.br");
-        navegador.findElement(By.id("password")).sendKeys("desde1909@");
+       //navegador.findElement(By.className()).click();
     }
 }
